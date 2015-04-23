@@ -3,7 +3,7 @@
 Plugin Name: Ads Widgets Easy
 Plugin URI: http://wordpress.org/plugins/Ads-Widgets-Easy/
 Description: With this plugin you can create unlimited number of ads inside your WordPress widget. There are several smart options provided to customize ads for your needs.
-Version: 1.0
+Version: 2.0
 Author: Nguyen Ngoc Linh
 Author URI: http://mauwebsitedep.com/gioi-thieu
  */
@@ -33,7 +33,7 @@ public function __construct() {
 	public function widget( $args, $instance ) {
 		extract( $args );
 		$name = apply_filters( 'widget_name', $instance['name'] );
-		$name = apply_filters( 'widget_link', $instance['link'] );
+		$link = apply_filters( 'widget_link', $instance['link'] );
 		$image_uri = apply_filters( 'widget_image_uri', $instance['image_uri'] );
 		echo $before_widget; ?>
         
